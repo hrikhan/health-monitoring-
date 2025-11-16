@@ -1,14 +1,10 @@
-
-
 import 'package:get/get.dart';
+import '../../features/heartbeat/controllers/heartbeat_controller.dart';
 
 class ControllerBinder extends Bindings {
   @override
   void dependencies() {
-    // Get.lazyPut<LogInController>(
-    //       () => LogInController(),
-    //   fenix: true,
-    // );
-
+    // Register HeartbeatController as a singleton
+    Get.put<HeartbeatController>(HeartbeatController(), permanent: true);
   }
 }
